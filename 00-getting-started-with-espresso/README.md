@@ -14,9 +14,9 @@ An Android project to run an Espresso test.
 2. Run `./gradlew connectedAndroidTest`
 
 ### On Windows
-1. 
-2. Start an Android emulator or connect an Android device
-3. Run `gradlew.bat connectedAndroidTest`
+
+1. Start an Android emulator or connect an Android device
+2. Run `gradlew.bat connectedAndroidTest`
 
 ## Requirement
 - Java 11
