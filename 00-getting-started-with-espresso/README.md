@@ -18,5 +18,14 @@ An Android project to run an Espresso test.
 1. Start an Android emulator or connect an Android device
 2. Run `gradlew.bat connectedAndroidTest`
 
+## Run with HeadSpin
+
+1. Connect to a device over `hs connect`
+2. Run `connectedAndroidTest`
+
+Note:
+`Unknown platform error occurred when running the UTP test suite. Please check logs for details.` error could happen when the gradle command does not handle the device detection automatically. Then, please try out another device in this repository.
+
+
 ## Requirement
 - Java 11
