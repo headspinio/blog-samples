@@ -1,4 +1,4 @@
-# testing_guide
+# Flutter Testing Guide
 
 A Flutter project for _Flutter Testing Guide_
 
@@ -27,8 +27,8 @@ $ flutter test test/widget_test.dart
 This command requires a device to run on.
 
 1. Start a device
-  - A real device or a simulator/emulator
+    - A real device or a simulator/emulator
 2. Run test command below
-  ```
-  $ flutter test integration_test/integration_test.dart
-  ```
+    ```
+    $ flutter test integration_test/integration_test.dart
+    ```
