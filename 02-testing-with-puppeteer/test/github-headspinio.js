@@ -1,6 +1,8 @@
 const puppeteer = require('puppeteer');
 (async () => {
+  // Local browser directly
   // const browser = await puppeteer.launch({headless: false});
+  // Attach to the remote browser via hs connect
   const browser = await puppeteer.connect({browserURL: `http://localhost:9222`});
   const page = await browser.newPage();
 
@@ -17,7 +19,10 @@ const puppeteer = require('puppeteer');
   } catch (err) {
     console.log(err);
   } finally {
+    // Close the local browser
     // await browser.close();
+
+    // Close and disconnect the remote page and browser
     await page.close();
     await browser.disconnect();
   }
