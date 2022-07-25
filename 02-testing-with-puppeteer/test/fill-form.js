@@ -21,6 +21,7 @@ const puppeteer = require('puppeteer');
     if (url !== `http://localhost:8000/fill-form`) {
       throw new Error(`The URL was not http://localhost:8000/fill-form`);
     }
+    await page.screenshot({path: "./fill-form.png", fullPage: true});
   } catch (err) {
     console.log(err);
   } finally {

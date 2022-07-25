@@ -21,6 +21,7 @@ const puppeteer = require('puppeteer');
     if (url !== `http://localhost:8000/login`) {
       throw new Error(`The URL was not http://localhost:8000/login`);
     }
+    await page.screenshot({path: "./login.png", fullPage: true});
   } catch (err) {
     console.log(err);
   } finally {

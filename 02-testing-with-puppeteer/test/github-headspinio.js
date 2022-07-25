@@ -16,6 +16,7 @@ const puppeteer = require('puppeteer');
     if (url !== `https://github.com/headspinio`) {
       throw new Error(`The URL was not https://github.com/headspinio`);
     }
+    await page.screenshot({path: "./github-headspinio.png", fullPage: true});
   } catch (err) {
     console.log(err);
   } finally {
