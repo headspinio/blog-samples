@@ -12,6 +12,8 @@ const puppeteer = require('puppeteer');
     await page.type(`#fname`, "<your first name>");
     await page.type(`#lname`, "<your last name>");
 
+    await page.screenshot({path: "./fill-form.png", fullPage: true});
+
     await Promise.all([
       page.click(`input[name="nameSubmit"]`),
       page.waitForNavigation()
@@ -21,7 +23,6 @@ const puppeteer = require('puppeteer');
     if (url !== `http://localhost:8000/fill-form`) {
       throw new Error(`The URL was not http://localhost:8000/fill-form`);
     }
-    await page.screenshot({path: "./fill-form.png", fullPage: true});
   } catch (err) {
     console.log(err);
   } finally {

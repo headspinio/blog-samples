@@ -17,8 +17,8 @@ This directory is for Testing with Puppeteer- A Complete Guide
 ## Run tests
 
 - `node test/fill-form.js`
-    - Fill in input fields
+    - Fill texts in input fields
 - `node test/login.js`
-    - Fill in email and password fields
+    - Fill email and password in input fields
 - `node test/github-headspinio.js`
     - Open `https://github.com/headspinio`

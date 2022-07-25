@@ -12,6 +12,8 @@ const puppeteer = require('puppeteer');
     await page.type(`#email`, "your email");
     await page.type(`#password`, "your password");
 
+    await page.screenshot({path: "./login.png", fullPage: true});
+
     await Promise.all([
       page.click(`input[name="loginSubmit"]`),
       page.waitForNavigation()
@@ -21,7 +23,6 @@ const puppeteer = require('puppeteer');
     if (url !== `http://localhost:8000/login`) {
       throw new Error(`The URL was not http://localhost:8000/login`);
     }
-    await page.screenshot({path: "./login.png", fullPage: true});
   } catch (err) {
     console.log(err);
   } finally {
