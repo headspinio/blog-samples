@@ -31,3 +31,9 @@ In `blog-samples/02-testing-with-puppeteer` on another terminal
     - Fill email and password in input fields
 - `node test/github-headspinio.js`
     - Open `https://github.com/headspinio`
+
+## Run tests on HeadSpin
+
+1. Start a browser session via `hs connect browser` command
+2. Run `node test/github-headspinio.js`
+    - `github-headspinio.js` scenario will open `https://github.com/headspinio` on the remote browser, and take a screenshot.
