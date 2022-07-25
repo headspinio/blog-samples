@@ -9,13 +9,8 @@ const puppeteer = require('puppeteer');
     await page.goto("http://localhost:8000");
     await page.waitForSelector(`#fname`, {timeout, visible: true});
 
-    await page.type(`#fname`, "<your first name>");
-    await page.type(`#lname`, "<your last name>");
-
-    await Promise.all([
-      page.click(`input[name="nameSubmit"]`),
-      page.waitForNavigation()
-    ])
+    const title = await page.title();
+    console.log(title);
   } catch (err) {
     console.log(err);
   } finally {
