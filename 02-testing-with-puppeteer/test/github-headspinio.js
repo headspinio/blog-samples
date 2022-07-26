@@ -17,6 +17,21 @@ const puppeteer = require('puppeteer');
       throw new Error(`The URL was not https://github.com/headspinio`);
     }
     await page.screenshot({path: "./github-headspinio.png", fullPage: true});
+
+    const repoTab = await page.$(`a[href$="/orgs/headspinio/repositories"]`);
+    await repoTab.click();
+    await page.waitForNavigation();
+
+    const placeholder = await page.$eval(`[id="your-repos-filter"]`, el => el.getAttribute('placeholder'))
+    if (placeholder !== 'Find a repository…') {
+      throw new Error(`The search placeholder was not 'Find a repository…'. Actual: ${placeholder}`);
+    }
+    await page.screenshot({path: "./github-headspinio-repos.png", fullPage: true});
+
+    const imgSrc = await page.$eval(`img[alt="@headspinio"]`, async (el) => await el.getAttribute('src'));
+    if (!imgSrc.startsWith("https://avatars.githubusercontent.com")) {
+      throw new Error(`The image was not an avatar image`);
+    }
   } catch (err) {
     console.log(err);
   } finally {
