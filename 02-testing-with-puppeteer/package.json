@@ -1,0 +1,15 @@
+{
+  "name": "02-testing-with-puppeteer",
+  "version": "0.0.0",
+  "description": "Sample code for Testing with Puppeteer- A Complete Guide",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "puppeteer": "^15.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0"
+}
