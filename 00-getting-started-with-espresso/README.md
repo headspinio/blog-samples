@@ -30,6 +30,7 @@ Another way:
 
 1. Connect to a device over `hs connect`
 2. Run `./gradlew installDebug installDebugAndroidTest`
+    - Please make sure if `instrumentation:io.headspin.helloworld.test/androidx.test.runner.AndroidJUnitRunner (target=io.headspin.helloworld)` instrumentation name exists by calling `adb shell pm list instrumentation`
 3. Run `adb shell am instrument -w io.headspin.helloworld.test/androidx.test.runner.AndroidJUnitRunner`
 
 ## Requirement
