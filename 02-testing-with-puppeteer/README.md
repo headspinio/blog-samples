@@ -1,6 +1,7 @@
 # Testing with Puppeteer- A Complete Guide
 
-This directory is sample code for Testing with Puppeteer- A Complete Guide
+This directory is sample code for [Testing with Puppeteer - A Complete Guide](https://www.headspin.io/blog/testing-with-puppeteer-a-complete-guide)
+
 
 ## Setup
 
